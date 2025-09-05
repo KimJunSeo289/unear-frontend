@@ -34,7 +34,7 @@ export const sendRouletteResult = async (eventId: number, prizeName: string) => 
     if (contentType && contentType.includes('application/json')) {
       responseData = await response.json();
     } else {
-      const _textResponse = await response.text();
+      await response.text();
       throw new Error('서버에서 올바르지 않은 응답을 받았습니다.');
     }
     // eslint-disable-next-line @typescript-eslint/no-unused-vars

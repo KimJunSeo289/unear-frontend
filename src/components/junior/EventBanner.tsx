@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import CommonModal from '@/components/common/CommonModal';
 import Banner from '../../assets/Junior/banner.png';

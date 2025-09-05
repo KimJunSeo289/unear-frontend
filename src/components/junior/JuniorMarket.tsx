@@ -9,7 +9,7 @@ import { postDownloadCoupon } from '@/apis/postDownloadCoupon';
 import { toggleFavorite } from '@/apis/postFavorite';
 import LoadingSpinner from '@/components/common/LoadingSpinner';
 import type { Place } from '@/types/map';
-import type { CategoryType, EventType, StoreClassType } from '@/components/common/StoreTypeIcon';
+import type { CategoryType, EventType } from '@/components/common/StoreTypeIcon';
 import type { StoreStatusType } from '@/components/common/StoreStatus';
 import { getCurrentLocation, calculateDistance, formatDistance } from '@/utils/distanceUtils';
 import { showErrorToast, showToast } from '@/utils/toast';

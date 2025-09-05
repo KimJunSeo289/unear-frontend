@@ -71,7 +71,7 @@ const StoreCouponCard: React.FC<StoreCouponCardProps> = ({
     setDownloadingCoupons((prev) => new Set(prev).add(couponId));
 
     try {
-      const _downloaded = await postDownloadCoupon(Number(couponId));
+      await postDownloadCoupon(Number(couponId));
       showToast('쿠폰 다운로드 완료');
 
       // UI 상태 갱신

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Header from '@/components/common/Header';
 import LoadingScreen from '@/components/common/LoadingScreen';
 import EventBanner from '@/components/junior/EventBanner';
@@ -6,7 +6,7 @@ import StampRouletteCard from '@/components/junior/StampRouletteCard';
 import JuniorMap from '@/components/junior/JuniorMap';
 import TodayCouponSection from '@/components/junior/TodayCouponSection';
 import JuniorMarket from '@/components/junior/JuniorMarket';
-import { getStampsStatus, type StampSlot } from '@/apis/stamp';
+import { getStampsStatus } from '@/apis/stamp';
 import { getUserInfo } from '@/apis/user';
 
 type Stamp = {

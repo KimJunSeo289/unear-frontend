@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host --port 4000",
-    "build": "vite build",
+    "build": "tsc --noEmit && vite build",
     "lint": "eslint . --config eslint.config.js --fix",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,css,json}\"",
     "preview": "vite preview",

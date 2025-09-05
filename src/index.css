@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* LG EI Headline: 굵기별로 family 분리 */
+@font-face {
+  font-family: 'LGEIHeadline-Thin';
+  src: url('/font/LG-EI-Headline-otf/LGEIHeadline-Thin.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LGEIHeadline-Light';
+  src: url('/font/LG-EI-Headline-otf/LGEIHeadline-Light.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LGEIHeadline-Regular';
+  src: url('/font/LG-EI-Headline-otf/LGEIHeadline-Regular.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LGEIHeadline-Semibold';
+  src: url('/font/LG-EI-Headline-otf/LGEIHeadline-Semibold.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'LGEIHeadline-Bold';
+  src: url('/font/LG-EI-Headline-otf/LGEIHeadline-Bold.otf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: 'LGEIHeadline-Regular', sans-serif;
+}
+
+html {
+  font-family: 'LGEIHeadline-Regular', sans-serif;
+  /* 스크롤바로 인한 레이아웃 시프트 방지 */
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
+}
+
+/* 스크롤바 숨기기 */
+.scrollbar-hide {
+  /* Firefox */
+  scrollbar-width: none;
+  /* Safari and Chrome */
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

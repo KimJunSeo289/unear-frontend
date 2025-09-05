@@ -33,7 +33,7 @@ type Story = StoryObj<typeof CategoryDiscountCard>;
 
 export const Default: Story = {
   args: {
-    category: 'food',
+    category: 'FOOD',
     categoryName: '외식',
     discountPercentage: 42,
     discountAmount: 8904,
@@ -42,7 +42,7 @@ export const Default: Story = {
 
 export const Cafe: Story = {
   args: {
-    category: 'cafe',
+    category: 'CAFE',
     categoryName: '카페',
     discountPercentage: 35,
     discountAmount: 12500,
@@ -51,7 +51,7 @@ export const Cafe: Story = {
 
 export const Shopping: Story = {
   args: {
-    category: 'shopping',
+    category: 'SHOPPING',
     categoryName: '쇼핑',
     discountPercentage: 28,
     discountAmount: 15600,
@@ -60,7 +60,7 @@ export const Shopping: Story = {
 
 export const CustomStyled: Story = {
   args: {
-    category: 'beauty',
+    category: 'BEAUTY',
     categoryName: '뷰티',
     discountPercentage: 50,
     discountAmount: 25000,

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/common/Header';
 import ToggleButton from '../components/common/ToggleButton';
@@ -31,6 +31,11 @@ interface ApiErrorResponse {
         };
   };
 }
+
+// 타입 가드 함수들
+const isApiErrorWithObject = (data: any): data is { codeName?: string; message?: string; data?: any } => {
+  return data && typeof data === 'object' && !Array.isArray(data);
+};
 
 const SignUpPage = () => {
   const navigate = useNavigate();
@@ -279,7 +284,7 @@ const SignUpPage = () => {
         apiError.response?.data?.codeName === 'INVALID_INPUT_VALUE' &&
         apiError.response.data?.data?.fieldErrors
       ) {
-        const fieldErrors = apiError.response.data.data.fieldErrors;
+        const fieldErrors = (apiError.response.data as any).data.fieldErrors;
         let errorMessage = '입력값을 확인해주세요:\n';
         Object.entries(fieldErrors).forEach(([, message]) => {
           errorMessage += `- ${message}\n`;

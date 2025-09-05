@@ -1,5 +1,15 @@
 import { useState } from 'react';
-import type { CategoryData, ApiMonthlyData } from './types';
+// import CategoryData removed './types';
+
+// ApiMonthlyData 타입 정의
+interface ApiMonthlyData {
+  month: number;
+  categoryData: Array<{
+    category: string;
+    categoryName: string;
+    discountAmount: number;
+  }>;
+}
 
 export const useStatisticsData = () => {
   const [currentMonth, setCurrentMonth] = useState(7);

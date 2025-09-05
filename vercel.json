@@ -10,8 +10,30 @@
   ],
   "routes": [
     {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/site.webmanifest",
+      "dest": "/site.webmanifest"
+    },
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico|webmanifest))",
+      "dest": "/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
-  ]
+  ],
+  "env": {
+    "VITE_API_BASE_URL": "https://radiant-exploration-production.up.railway.app",
+    "VITE_IMAGE_BASE_URL": "https://www.unear.site",
+    "VITE_KAKAO_MAP_KEY": "8b3384e5d8b3d6e38af1ecbd826931ce",
+    "VITE_KAKAO_REST_API_KEY": "58feeaa8ac44891c64a90c28f3bea112"
+  }
 }
